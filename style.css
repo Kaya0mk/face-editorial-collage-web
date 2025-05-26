@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+canvas, video {
+  max-width: 90%;
+  border: 2px solid #ccc;
+  margin-top: 10px;
+}
+
+.controls {
+  margin-top: 15px;
+}

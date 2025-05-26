@@ -2,19 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editorial Face Collage</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- MediaPipe -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <!-- Style -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    video, canvas {
+      width: 100%;
+      max-width: 640px;
+      border: 2px solid #ccc;
+      margin: 10px 0;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 16px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+
   <h1>📰 Editorial Face Collage</h1>
+
+  <!-- Live webcam -->
   <video id="video" autoplay muted playsinline></video>
+
+  <!-- Output canvas -->
   <canvas id="canvas"></canvas>
+
+  <!-- Controls -->
   <div class="controls">
     <button id="capture">📸 Capture</button>
     <button id="download">💾 Download</button>
   </div>
+
+  <!-- Logic -->
   <script src="face_collage.js"></script>
+
 </body>
 </html>
